@@ -3,7 +3,7 @@ defmodule WeatherTrackerWeb.WeatherConditionsController do
 
   require Logger
 
-  alias WeatherTracker.{WeatherConditions, WeatherConditions.WeatherCondition}
+  alias WeatherTracker.{WeatherConditions}
 
   def create(conn, params) do
     IO.inspect(params)
