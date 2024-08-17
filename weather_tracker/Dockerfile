@@ -21,4 +21,4 @@ EXPOSE 4000
 
 RUN mix clean
 
-CMD ["/app/entrypoint.sh"]
+CMD sleep 10; echo 'foo'; mix ecto.setup; mix phx.server;
