@@ -12,7 +12,7 @@ defmodule Publisher do
       interval: opts[:interval] || 10_000,
       weather_tracker_url: opts[:weather_tracker_url],
       sensors: opts[:sensors],
-      mesurements: :no_mesurements
+      measurements: :no_measurements
     }
 
     schedule_next_publish(state.interval)

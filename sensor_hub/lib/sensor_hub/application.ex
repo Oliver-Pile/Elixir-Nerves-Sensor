@@ -5,6 +5,8 @@ defmodule SensorHub.Application do
 
   use Application
 
+  alias SensorHub.Sensor
+
   @impl true
   def start(_type, _args) do
     children =
@@ -34,7 +36,7 @@ defmodule SensorHub.Application do
       # Children for all targets except host
       # Starts a worker by calling: SensorHub.Worker.start_link(arg)
       # {SensorHub.Worker, arg},
-      {BMP280, [i2c_address: 0x77, name: BMP280]}
+      {BMP280, [i2c_address: 0x77, name: BMP280]},
       {Finch, name: WeatherTrackerClient},
       {Publisher, %{sensors: sensors(), weather_tracker_url: weather_tracker_url()}}
     ]

@@ -95,4 +95,4 @@ config :mdns_lite,
 # import_config "#{Mix.target()}.exs"
 
 config :sensor_hub, :weather_tracker_url,
-  "http://192.168.0.107:4000/api/weather-conditions"
+  "http://192.168.1.107:4000/api/weather-conditions"
