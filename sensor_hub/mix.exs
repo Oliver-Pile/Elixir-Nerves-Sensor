@@ -49,6 +49,7 @@ defmodule SensorHub.MixProject do
       {:toolshed, "~> 0.4.0"},
       {:circuits_i2c, "~> 0.3.8"},
       {:bmp280, "~> 0.2.13", targets: @all_targets},
+      {:publisher, path: "../publisher", targets: @all_targets},
 
       # Allow Nerves.Runtime on host to support development, testing and CI.
       # See config/host.exs for usage.
