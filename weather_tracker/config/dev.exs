@@ -4,7 +4,7 @@ import Config
 config :weather_tracker, WeatherTracker.Repo,
   username: "postgres",
   password: "postgres",
-  hostname: "localhost",
+  hostname: "db",
   database: "weather_tracker_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
