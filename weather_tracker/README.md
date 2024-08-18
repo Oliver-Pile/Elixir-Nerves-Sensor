@@ -1,18 +1,15 @@
 # WeatherTracker
 
-To start your Phoenix server:
+An API server responsible for receiving weather data from nerves devices and storing the result in a PG Timescale DB.
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+Currently only endpoint is: `POST /api/weather-conditions` where the payload is valid JSON for the required fields.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## Containers
+This project also holds the `docker-compose.yml` file which contains definitions for the API server, Postgres DB and Grafana containers.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+To start there containers run `docker compose up`.
 
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Access the services on the following ports:
+  - API `:4000`
+  - Grafana `:3000`
+  - DB `:5432`
