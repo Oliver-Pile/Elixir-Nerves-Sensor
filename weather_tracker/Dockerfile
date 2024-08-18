@@ -21,4 +21,4 @@ EXPOSE 4000
 
 RUN mix clean
 
-CMD sleep 10; echo 'foo'; mix ecto.setup; mix phx.server;
+CMD sleep 10; echo 'API Server Starting'; mix ecto.setup; mix phx.server;
